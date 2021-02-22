@@ -1,0 +1,17 @@
+<div class='input-container'>
+    <label
+    [@labelAnimation]="inputIsOpen ? 'open':'close'"
+    for="">{{labelName}}</label>
+    <input
+    [type]="type" 
+    [placeholder]="placeholder"
+    (focus)="openInput()"
+    (blur)="closeInput()"
+    [@placeholderAnimation]="inputIsOpen ? 'open':'close'"
+    >
+    <div>
+        <span
+        [@spanAnimation]="inputIsOpen ? 'open':'close'"
+        ></span>
+    </div>
+</div>

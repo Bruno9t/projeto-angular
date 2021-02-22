@@ -1,0 +1,22 @@
+<main>
+    <div [@openClose]="isOpen ? 'open':'closed'" 
+    (mouseover)='open()'
+    (mouseout)='close()'
+    class="open-close-container">
+    <div class="options-menu">
+        <div class='options'>
+            <div class='option' *ngFor='let route of childrenRoutes'>
+                <a [routerLink]="route.path">
+                    <figure>
+                        <mat-icon aria-hidden="false" aria-label="'Example'+ route.path +'icon'" >{{route.data?.icon}}</mat-icon>
+                    </figure>
+                    <p>{{route.data?.title}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class='page-content' [@routeAnimations]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+    </div>
+</main>

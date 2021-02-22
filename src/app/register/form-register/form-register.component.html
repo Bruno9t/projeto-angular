@@ -1,0 +1,62 @@
+<form action="" >
+    <div class='form-group name'>
+        <div class='field' >
+                <app-form-input
+                [labelName]="'Nome'"
+                [placeholder]="'Ex: Carlos'"
+                [type]="'text'"
+                >
+            </app-form-input>
+        </div>
+        <div class="field">
+                <app-form-input
+                [labelName]="'Sobrenome'"
+                [placeholder]="'Ex: Souza'"
+                [type]="'text'"
+                >
+            </app-form-input>
+        </div>
+    </div>
+    <div class='form-group mail'>
+        <div class="field">
+            <app-form-input
+            [labelName]="'E-mail'"
+            [placeholder]="'Ex: example@example.com'"
+            [type]="'email'"
+            >
+        </app-form-input>
+
+    </div>
+    <div class="field">
+        <app-form-input
+        [labelName]="'Confirmar e-mail'"
+        [placeholder]="'Ex: example@example.com'"
+        [type]="'email'"
+        >
+    </app-form-input>
+    
+    </div>
+    </div>
+    <div class="form-group user">
+        <app-form-input
+        [labelName]="'Usuário'"
+        [placeholder]="'Ex: example@example.com'"
+        [type]="'email'"
+        >
+    </app-form-input>
+    </div>
+    <div form-group-user='form-group pass'>
+        <app-form-input
+        [labelName]="'Senha'"
+        [placeholder]=""
+        [type]="'password'"
+        >
+    </app-form-input>
+        <app-form-input
+        [labelName]="'Confirmar senha'"
+        [placeholder]=""
+        [type]="'password'"
+        >
+    </app-form-input>
+    </div>
+</form>

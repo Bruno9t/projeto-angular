@@ -1,0 +1,123 @@
+main
+    height: 100vh
+    width: 100vw
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    background: linear-gradient(to right,#575353,#da3c71,#575353)
+
+    animation: back-float 10s ease
+
+    div.form-box
+        height: 78%
+        width: 38%
+        position: relative
+
+        border-radius: 10px
+        box-shadow: 1px 1px 5px #4e4b4b
+
+        background: var(--pink-app)
+
+        div.form-box-body
+            height: calc(0.78*100vh - 90px)
+
+            app-form-register
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 100%
+                width: 100%
+
+
+        div.form-box-header
+            position: relative
+
+            div.header-title
+                display: flex
+                align-items: center
+                padding: 22px
+                //position: relative
+                width: 100%
+                height: 90px
+                
+                h2
+                    margin:0
+                    font-size: 2rem
+                    color: white
+                    animation-name: logo-opacity
+                    animation-duration: 3s
+                    animation-timing-function: ease-out
+
+                mat-icon
+                    color: white
+                    position: absolute
+                    font-size: 3rem
+
+                    left: 50%
+                    top: 50%
+
+                    transform: translate(-50%,-50%)
+
+                    animation-name: note-float
+                    animation-duration: 1.7s
+                    animation-timing-function: ease-out
+                    transform-origin: center
+
+
+            div.line-down
+                position: absolute
+                width: 98%
+                height: 1px
+                background: linear-gradient(to left,#da3c71,#cac2c2,#da3c71)
+
+                left: 50%
+                transform: translateX(-50%)
+
+                animation-name: line-float
+                animation-duration: 1.6s
+                
+
+            @keyframes logo-opacity
+                        0%
+                            opacity: 0
+                        100%
+                            opacity: 1
+
+            @keyframes note-float
+                        0%
+                            opacity: 0
+                            text-shadow: 1px 34px 5px black
+                            top: 0
+                        100%
+                            opacity: 1
+            
+            @keyframes line-float
+                        0%
+                            opacity: 0
+                            left: 0
+                        100%
+                            opacity: 1
+
+            @keyframes back-float
+            //             0% 
+            //                 background-position: 0% 50%
+                        
+            //             50% 
+            //                 background-position: 100% 50%
+                        
+            //             100% 
+            //                 background-position: 50% 100%
+                        
+                        // 0%
+                        //     background: linear-gradient(to right,#da3c71,#575353)
+                        // 25%
+                        //     background: linear-gradient(to right,#575353,#da3c71,#575353)
+                        // 50%
+                        //     background: linear-gradient(to right,#575353,#da3c71)
+                        // 75%
+                        //     background: linear-gradient(to right,#575353,#da3c71,#575353)
+                        // 100%
+                        //     background: linear-gradient(to right,#da3c71,#575353)
+                            
